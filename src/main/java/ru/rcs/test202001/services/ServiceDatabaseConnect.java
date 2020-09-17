@@ -21,9 +21,7 @@ public class ServiceDatabaseConnect {
 
     public ServiceDatabaseConnect() throws SQLException {
         DriverManager.registerDriver(new JDBC());
-        this.connection = DriverManager.getConnection(CON_STR);
-        System.out.println(file.getPath()+" "+file.getAbsolutePath());
-
+        this.connection = DriverManager.getConnection(CON_STR);       
     }
 
     public Connection getConnection() {
