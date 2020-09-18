@@ -13,12 +13,11 @@ import java.util.List;
 public class ControllerQuery {
 
     @Autowired
-    ServiceDatabaseQuery serviceDB;
+    ServiceDatabaseQuery serviceDatabaseQuery;
 
     @GetMapping("/")
-    public List<Data> query(@RequestParam(value = "row") String row, @RequestParam(value = "col") String col) {
-        return serviceDB.getData(row, col);
+    public List<Data> query(@RequestParam(value = "row") String row, @RequestParam(value = "col") String col) throws Exception {
+        return serviceDatabaseQuery.getQuery(row, col);
     }
-
 
 }
