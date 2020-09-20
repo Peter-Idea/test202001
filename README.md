@@ -75,9 +75,8 @@ http://localhost:8080/?row=b&col=d
 
 * скопируйте jar файл в нужный каталог
 * скопируйте в каталог с jar файлом папку `dataset` с файлом БД `data.sqlite` 
-* используйте команды для запуска
-0. ```cd /usr/local/lib```
-0. ```java -jar test202001-*.jar```
+* используйте для запуска
+ ```java -jar test202001-*.jar```
 
 ## Установка докер образа
 ```docker build -t test .```
