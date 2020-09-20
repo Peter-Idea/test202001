@@ -14,7 +14,8 @@ public class ServiceDatabaseQuery {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public List<Data> getQuery(ParameterQuery parameterRow, ParameterQuery parameterCol) {
+    public List<Data> getQuery(ParameterQuery parameterRow,
+                               ParameterQuery parameterCol) {
         StringBuffer query = new StringBuffer("SELECT ");
         query.append(parameterRow).append(", ").append(parameterCol).append(", count(").append(parameterCol).append(") AS val FROM source_data group by ").append(parameterCol);
         return jdbcTemplate.query(query.toString(),
